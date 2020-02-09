@@ -1,6 +1,6 @@
 package models;
 
-import Interfaces.SightingInterface;
+import dao.SightingInterface;
 
 import java.time.format.DateTimeFormatter;
 

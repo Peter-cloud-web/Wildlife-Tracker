@@ -1,6 +1,8 @@
 package models;
 
-import Interfaces.AnimalInterface;
+import dao.AnimalInterface;
+
+import java.util.Objects;
 
 public class Animal implements AnimalInterface {
 
@@ -18,6 +20,8 @@ public class Animal implements AnimalInterface {
         this.animal_id = animal_id;
         this.id = id;
     }
+
+
     public int getAnimal_id() {
         return animal_id;
     }
@@ -53,6 +57,24 @@ public class Animal implements AnimalInterface {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return animalAge == animal.animalAge &&
+                animal_id == animal.animal_id &&
+                id == animal.id &&
+                Objects.equals(animalName, animal.animalName) &&
+                Objects.equals(animalHealth, animal.animalHealth);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(animalName, animalHealth, animalAge, animal_id, id);
+    }
+
 }
 
 
