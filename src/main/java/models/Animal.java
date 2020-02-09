@@ -7,6 +7,7 @@ public class Animal implements AnimalInterface {
     private String animalName;
     private String animalHealth;
     private int animalAge;
+    private int animal_id;
     private int id;
 
 
@@ -14,7 +15,11 @@ public class Animal implements AnimalInterface {
         this.animalName = animalName;
         this.animalHealth = animalHealth;
         this.animalAge = animalAge;
+        this.animal_id = animal_id;
         this.id = id;
+    }
+    public int getAnimal_id() {
+        return animal_id;
     }
 
     public String getAnimalName() {

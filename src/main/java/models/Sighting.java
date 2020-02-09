@@ -50,6 +50,4 @@ public class Sighting implements SightingInterface {
         this.id = id;
     }
 
-
-
 }
