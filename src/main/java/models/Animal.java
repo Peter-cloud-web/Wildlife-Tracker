@@ -1,6 +1,8 @@
 package models;
 
-import dao.AnimalInterface;
+import interfaces.AnimalInterface;
+import org.h2.engine.Database;
+import org.sql2o.Connection;
 
 import java.util.Objects;
 
@@ -74,7 +76,16 @@ public class Animal implements AnimalInterface {
     public int hashCode() {
         return Objects.hash(animalName, animalHealth, animalAge, animal_id, id);
     }
+    public void save() {
+        try(Connection con = DB.sql2o.open()) {
+            String sql = "INSERT INTO animals (name) VALUES (:name);";
+            this.id = (int) con.createQuery(sql, true)
+                    .addParameter("animalName", this.animalName)
+                    .executeUpdate()
+                    .getKey();
+        }
 
-}
+
+    }
 
 
