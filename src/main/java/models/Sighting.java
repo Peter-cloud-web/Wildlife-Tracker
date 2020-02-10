@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Objects;
 
-public class Sighting implements SightingInterface {
+public class Sighting {
     private String rangerName;
     private String animalLocation;;
     private int animal_id;

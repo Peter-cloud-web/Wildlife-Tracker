@@ -6,7 +6,7 @@ import org.sql2o.Connection;
 import java.util.List;
 import java.util.Objects;
 
-public class Animal implements AnimalInterface {
+public class Animal {
 
     private String animalName;
     private String animalHealth;
@@ -77,6 +77,7 @@ public class Animal implements AnimalInterface {
         return Objects.hash(animalName, animalHealth, animalAge, animal_id, id);
     }
 
+
     public void save() {
         try (Connection con = Database.sql2o.open()) {
             String sql = "INSERT INTO animals (animalName, animal_id) VALUES (:animalName,:animal_id);";
@@ -96,7 +97,6 @@ public class Animal implements AnimalInterface {
 
         }
     }
-    @Override
     public Animal findById(int id) {
         String sql = "SELECT * FROM animals WHERE id=:id;";
         try (Connection conn = Database.sql2o.open()){
