@@ -1,9 +1,9 @@
 package models;
 
 import interfaces.AnimalInterface;
-import org.h2.engine.Database;
 import org.sql2o.Connection;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Animal implements AnimalInterface {
@@ -76,16 +76,39 @@ public class Animal implements AnimalInterface {
     public int hashCode() {
         return Objects.hash(animalName, animalHealth, animalAge, animal_id, id);
     }
+
     public void save() {
-        try(Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO animals (name) VALUES (:name);";
+        try (Connection con = Database.sql2o.open()) {
+            String sql = "INSERT INTO animals (animalName, animal_id) VALUES (:animalName,:animal_id);";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("animalName", this.animalName)
+                    .addParameter("animal_id", this.animal_id)
                     .executeUpdate()
                     .getKey();
         }
-
-
     }
+
+    public static List<Animal> getAll() {
+        try (Connection con = Database.sql2o.open()) {
+            String sql = "SELECT * FROM anmals";
+            return con.createQuery(sql)
+                    .executeAndFetch(Animal.class);
+
+        }
+    }
+    @Override
+    public Animal findById(int id) {
+        String sql = "SELECT * FROM animals WHERE id=:id;";
+        try (Connection conn = Database.sql2o.open()){
+            Animal animal = conn.createQuery(sql)
+                    .addParameter("id",id)
+                    .executeAndFetchFirst(Animal.class);
+            return animal;
+        }catch (IndexOutOfBoundsException ex){
+            System.out.println(ex);
+            return null;
+        }
+    }
+}
 
 
