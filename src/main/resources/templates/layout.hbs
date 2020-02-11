@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{#block "wildlife"}}{{/block}}</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+</head>
+ <body>
+<div style="height: 200px; width: 500px; color: #ffffff;>
+    background-image: url(images/zebra.jpg); background-repeat: no-repeat;
+</div>
+
+
+<section class="land-page" id="land">
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/animal/new">Register Animal</a></li>
+        <li role="presentation"><a href="/endangered/new">Endangered animals</a></li>
+        <li role="presentation"><a href="/sighting">Discovered sightings</a></li>
+
+        <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                Category Menu <span class="caret"></span>
+            </a>
+        </li>
+    </ul>
+
+    <div class="container">
+        <!--begin main template-->
+        <div class="page-header">
+            <img src="/images/rawpixel-com-296621.jpg" width="70%" alt="https://unsplash.com/search/task?photo=Lh_bn9SgRSY">
+            <h1>Welcome to my To Do List. <small>Let's be organized, focused, and efficient.</small></h1>
+        </div>
+
+        <div class="col-md-12">
+            {{#block "content"}}
+            {{/block}}
+
+        </div>
+    </div>
+    <!--end main template-->
+{{#block "footer"}}
+        <footer class="footer">
+            <div class="container">
+                <hr>
+                <p class="text-muted">
+                    <a href="/categories/delete">delete all categories & tasks</a><br>
+                    <a href="/tasks/delete">delete all tasks</a>
+                </p>
+            </div>
+        </footer>
+</section>
+
+ </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </html>
+{{/block}}
+</html>

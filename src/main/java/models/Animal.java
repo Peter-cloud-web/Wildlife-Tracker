@@ -1,6 +1,5 @@
 package models;
 
-import interfaces.AnimalInterface;
 import org.sql2o.Connection;
 
 import java.util.List;
@@ -78,7 +77,7 @@ public class Animal {
     }
 
 
-    public void save() {
+    public void saveAnimal() {
         try (Connection con = Database.sql2o.open()) {
             String sql = "INSERT INTO animals (animalName, animal_id) VALUES (:animalName,:animal_id);";
             this.id = (int) con.createQuery(sql, true)

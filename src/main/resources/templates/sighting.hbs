@@ -1,0 +1,19 @@
+{{#partial "content"}}
+<form action="/new-sighting" method="post">
+    <select name="selectedAnimal" required>
+        <option value="">Choose Animal</option>
+        <option value="1">Rhino</option>
+        {{#each allAnimals}}
+            <option value="{{id}}">{{animal_name}}</option>
+        {{/each}}
+        {{#each allEndangered}}
+            <option value="{{id}}">{{animal_name}}</option>
+        {{/each}}
+
+    </select>
+    <input type="text" name="location" id="" placeholder="Location" required>
+    <input type="text" name="ranger" id="" placeholder="Ranger Name" required>
+    <input type="submit" class="btn light">
+</form>
+{{/partial}}
+{{> layouts.hbs}}

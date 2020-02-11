@@ -1,5 +1,4 @@
 package models;
-import interfaces.SightingInterface;
 import org.sql2o.Connection;
 
 import java.time.format.DateTimeFormatter;

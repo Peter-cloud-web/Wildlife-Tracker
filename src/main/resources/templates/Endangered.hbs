@@ -1,0 +1,23 @@
+{{#partial "content"}}
+<section class="endangered-species" id="endangered">
+    <h3>Endangered Animal</h3>
+    <form action="/new-endangered" method="post">
+        <input type="text" name="name" id="" placeholder="Animal Name" required>
+        <select name="health" required>
+            <option value="">Choose health option</option>
+            <option value="Healthy">Healthy</option>
+            <option value="Ill">Ill</option>
+            <option value="Injured">Injured</option>
+        </select>
+        <select name="age" required>
+            <option value="">Chose age</option>
+            <option value="New Born">New Born</option>
+            <option value="Young">Young</option>
+            <option value="Old">Old</option>
+        </select>
+        <input type="submit" class="btn light">
+    </form>
+</section>
+
+{{/partial}}
+{{> layouts.hbs}}
