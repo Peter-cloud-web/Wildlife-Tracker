@@ -20,6 +20,13 @@ public class App {
 //            model.put("allSightings", Sighting.getAll());
             return new ModelAndView(model,"index.hbs");
         },new HandlebarsTemplateEngine());
+        get("/registry", (req,res)->{
+                    Map<String, Object> model = new HashMap<>();
+//                    model.put("allAnimals", Animal.getAll());
+//                    model.put("allEndangered", EndangeredAnimal.getAllAnimals());
+//                    model.put("allSightings", Sighting.getAll());
+                    return new ModelAndView(model,"registry.hbs");
+                }, new HandlebarsTemplateEngine());
 
         get("/animal/new", (req,res)-> {
             Map<String, Object> model = new HashMap<>();
@@ -29,9 +36,13 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model,"Endangered.hbs");
         }, new HandlebarsTemplateEngine());
+        get("/sighting", (req,res)-> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model,"sighting.hbs");
+        }, new HandlebarsTemplateEngine());
 
 
-        post("/animal/new",(req,res)->{
+        post("/new/animal",(req,res)->{
             Map<String, Object> model = new HashMap<>();
             String name = req.queryParams("name");
             int animal_id = Integer.parseInt(req.queryParams("animal_id"));
@@ -42,7 +53,7 @@ public class App {
             return new ModelAndView(model,"success.hbs");
         },new HandlebarsTemplateEngine());
 
-        post("/sighting",(req,res)->{
+        post("/new/sighting",(req,res)->{
             Map<String,Object>model = new HashMap<>();
             String rangerName = req.queryParams("rangerName");
             String animalLocation = req.queryParams("animalLocation");
@@ -53,7 +64,7 @@ public class App {
             return new ModelAndView(model,"success.hbs");
         },new HandlebarsTemplateEngine());
 
-        post("endangered/new" ,(req,res)->{
+        post("new/endangered" ,(req,res)->{
             Map<String,Object> model = new HashMap<>();
             String name = req.queryParams("name");
             String health = req.queryParams("health");

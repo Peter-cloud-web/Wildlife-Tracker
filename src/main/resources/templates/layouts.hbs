@@ -3,24 +3,43 @@
 <head>
     <title>{{#block "wildlife"}}{{/block}}</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Libre+Baskerville|Modak&display=swap" rel="stylesheet">
 </head>
  <body style=";">
 <style>
-body {background:url(/images/j.jpg);
+body {background:url(/images/lion.webp);
 background-repeat: no-repeat;
 width:100%;
 background-position:center;
 background-size: cover;
-height:100%}
+height:100%
+font-family: 'Libre Baskerville', serif;}
 
-li{ font-weight:bolder; text-align:right;padding-left:50px;
+li{ font-weight:bolder; text-align:right;background-color:rgba(0,0,0,0.7);padding-left:95px;
 }
-section{padding-top:100px;}
+footer{padding-top:100px;background-color:rgba(0,0,0,0.5);}
+
+h1{ font-size:60px;background-color:rgba(0,190,209,0.4);
+
+
+
+    font-family: 'Libre Baskerville', serif;
+
+    font-family: 'Modak', cursive;
+
+    font-family: 'Abril Fatface', cursive;
+
+
+
+ font-weight:bolder;color:black;}
+ p{
+ color:white;font-size:13px;
+ }
+
 </style>
 <div>
 
 </div>
-<p style="color: blue;">This is a paragraph.</p>
 
 <section class="land-page" id="land" style="text-align:center">
     <ul class="nav nav-tabs">
@@ -29,6 +48,7 @@ section{padding-top:100px;}
         <li role="presentation"><a href="/animal/new">Register Animal</a></li>
         <li role="presentation"><a href="/endangered/new">Endangered animals</a></li>
         <li role="presentation"><a href="/sighting">Discovered sightings</a></li>
+        <li role="presentation"><a href="/registry">View Registry</a></li>
 
         <li role="presentation" class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -40,8 +60,7 @@ section{padding-top:100px;}
     <div class="container">
         <!--begin main template-->
         <div class="page-header">
-            <img src="/images/rawpixel-com-296621.jpg" width="70%" alt="https://unsplash.com/search/task?photo=Lh_bn9SgRSY">
-            <h1>Welcome to my To Do List. <small>Let's be organized, focused, and efficient.</small></h1>
+            <h1>Welcome to the wild.</h1>
         </div>
 
         <div class="col-md-12">
@@ -55,16 +74,15 @@ section{padding-top:100px;}
         <footer class="footer">
             <div class="container">
                 <hr>
-                <p class="text-muted">
-                    <a href="/categories/delete">delete all categories & tasks</a><br>
-                    <a href="/tasks/delete">delete all tasks</a>
-                </p>
+                <p>Contact information: <a href="wildlifeconservancy.com">
+                    wildlifeconservancy@gmail.com</a>.</p>
             </div>
         </footer>
 </section>
 
  </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </html>
 {{/block}}
