@@ -7,23 +7,29 @@ import spark.template.handlebars.HandlebarsTemplateEngine;
 import java.util.HashMap;
 import java.util.Map;
 
-import static spark.Spark.get;
-import static spark.Spark.post;
+import static spark.Spark.*;
 
 public class App {
     public static void main(String[] args){
+        staticFileLocation("/public");
+
         get("/",(req,res)->{
             Map<String, Object> model = new HashMap<>();
-            model.put("allEndangered", EndangeredAnimal.getAllAnimals());
-            model.put("allAnimals", Animal.getAll());
-            model.put("allSightings", Sighting.getAll());
+//            model.put("allEndangered", EndangeredAnimal.getAllAnimals());
+//            model.put("allAnimals", Animal.getAll());
+//            model.put("allSightings", Sighting.getAll());
             return new ModelAndView(model,"index.hbs");
         },new HandlebarsTemplateEngine());
 
-        get("/new/animal", (req,res)-> {
+        get("/animal/new", (req,res)-> {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model,"Animal.hbs");
         }, new HandlebarsTemplateEngine());
+        get("/endangered/new", (req,res)-> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model,"Endangered.hbs");
+        }, new HandlebarsTemplateEngine());
+
 
         post("/animal/new",(req,res)->{
             Map<String, Object> model = new HashMap<>();

@@ -4,14 +4,23 @@
     <title>{{#block "wildlife"}}{{/block}}</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
 </head>
- <body>
-<div style="height: 200px; width: 500px; color: #ffffff;>
-    background-image: url(images/zebra.jpg); background-repeat: no-repeat;
+ <body style=";">
+<style>
+body {background:url(/images/mammal.jpg);
+background-repeat: no-repeat;
+width:100%;
+background-position:center;
+background-size: cover;
+height:100%}
+</style>
+<div>
+
 </div>
+<p style="color: blue;">This is a paragraph.</p>
 
-
-<section class="land-page" id="land">
+<section class="land-page" id="land" style="text-align:center">
     <ul class="nav nav-tabs">
+
         <li role="presentation" class="active"><a href="/">Home</a></li>
         <li role="presentation"><a href="/animal/new">Register Animal</a></li>
         <li role="presentation"><a href="/endangered/new">Endangered animals</a></li>
