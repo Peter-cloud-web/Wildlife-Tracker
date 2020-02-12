@@ -1,13 +1,12 @@
 {{#partial "content"}}
-    <section class="dash">
+    <section class="registry">
         <h1>
-            <span>Wildlife tracker dashboard</span>
             <a href="/"><-</a> </h1>
         <section class="stats">
 
             <div class="left-sec">
                 <h3>Tracked Animals</h3>
-                {{#each  allSightings}}
+                {{#each  getallSightings}}
                     <div>
                         <p>Animal{{animal_name}} Sighted</p>
                         <p>Location: {{animal_location}}</p>

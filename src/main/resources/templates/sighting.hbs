@@ -1,18 +1,18 @@
 {{#partial "content"}}
 <form action="/new/sighting" method="post">
     <select name="selectedAnimal" required>
-        <option value="">Choose Animal</option>
-        <option value="1">Rhino</option>
+        <option value="">Choose Animal</option><br><br>
+        <option value="1">Rhino</option><br><br>
         {{#each allAnimals}}
-            <option value="{{id}}">{{animal_name}}</option>
+            <option value="{{id}}">{{animal_name}}</option><br><br>
         {{/each}}
         {{#each allEndangered}}
-            <option value="{{id}}">{{animal_name}}</option>
+            <option value="{{id}}">{{animal_name}}</option><br><br>
         {{/each}}
 
     </select>
-    <input type="text" name="location" id="" placeholder="Location" required>
-    <input type="text" name="ranger" id="" placeholder="Ranger Name" required>
+    <input type="text" name="location" id="" placeholder="Location" required><br><br>
+    <input type="text" name="ranger" id="" placeholder="Ranger Name" required><br><br>
     <input type="submit" class="btn light">
 </form>
 {{/partial}}
