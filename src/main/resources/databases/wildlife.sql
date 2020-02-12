@@ -18,6 +18,6 @@ CREATE TABLE IF NOT EXISTS endangered_animals(
   id SERIAL PRIMARY KEY,
   animal_id int,
   animal_name VARCHAR ,
-  animal_age VARCHAR,
+  animal_age int,
   animal_health VARCHAR
 );

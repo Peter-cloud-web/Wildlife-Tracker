@@ -2,22 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3942d301-05e4-412c-b43b-9253bdd91633" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/models/AnimalTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/models/DatabaseRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/models/EndangeredAnimalTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Animal.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Animal.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Endangered.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Endangered.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layouts.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layouts.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registry.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registry.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sighting.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sighting.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/success.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/success.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/databases/wildlife.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/databases/wildlife.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/AnimalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/AnimalTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -38,6 +35,16 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="150">
       <file pinned="false" current-in-tab="false">
@@ -50,9 +57,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/models/EndangeredAnimal.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/models/Animal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="193">
+              <caret line="73" column="49" lean-forward="true" selection-start-line="73" selection-start-column="49" selection-end-line="73" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/models/Animal.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+            <state relative-caret-position="184">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/models/AnimalTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+            <state relative-caret-position="320">
+              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,27 +95,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Endangered.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            <state relative-caret-position="320">
+              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registry.hbs">
+        <entry file="file://$PROJECT_DIR$/src/main/java/models/EndangeredAnimal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+            <state relative-caret-position="124">
+              <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/databases/wildlife.sql">
-          <provider editor-type-id="OdpsQlGraph" />
-          <provider selected="true" editor-type-id="OdpsQlEditor">
-            <state relative-caret-position="240">
-              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/models/EndangeredAnimalTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -122,10 +132,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/models/Sighting.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/models/DatabaseRule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="285">
+              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,7 +170,6 @@
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/resources/databases/wildlife.sql" />
         <option value="$PROJECT_DIR$/src/main/java/Interfaces/AnimalInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/AnimalInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/AnimalDao.java" />
@@ -175,17 +184,20 @@
         <option value="$PROJECT_DIR$/src/main/resources/Templates/layout.hbs" />
         <option value="$PROJECT_DIR$/src/main/resources/Templates/Animal.hbs" />
         <option value="$PROJECT_DIR$/src/main/resources/Templates/success.hbs" />
-        <option value="$PROJECT_DIR$/src/main/java/App.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/layouts.hbs" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/success.hbs" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/Animal.hbs" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/Endangered.hbs" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/sighting.hbs" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/registry.hbs" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.hbs" />
+        <option value="$PROJECT_DIR$/src/main/resources/databases/wildlife.sql" />
         <option value="$PROJECT_DIR$/src/main/java/models/Database.java" />
-        <option value="$PROJECT_DIR$/src/test/java/models/AnimalTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/models/DatabaseRule.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/Animal.hbs" />
+        <option value="$PROJECT_DIR$/src/main/java/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Animal.java" />
+        <option value="$PROJECT_DIR$/src/test/java/models/AnimalTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/models/EndangeredAnimalTest.java" />
       </list>
     </option>
   </component>
@@ -196,8 +208,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="618" />
-    <option name="y" value="32" />
+    <option name="x" value="9" />
+    <option name="y" value="50" />
     <option name="width" value="763" />
     <option name="height" value="680" />
   </component>
@@ -207,6 +219,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -296,12 +310,31 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Wildlife-Tracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Wildlife-Tracker" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Wildlife-Tracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Wildlife-Tracker" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Wildlife-Tracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Wildlife-Tracker" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -331,13 +364,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AnimalTest.getId_animalInstantiatewithId_int">
-    <configuration name="AnimalTest.getAge_animalInstantiatewithAge_String" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.AnimalTest.delete_deleteAnimalFromDatabase_0">
+    <configuration name="AnimalTest.delete_deleteAnimalFromDatabase_0" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;models.AnimalTest.getAge_animalInstantiatewithAge_String&quot;" />
+        <option name="scriptParameters" value="--tests &quot;models.AnimalTest.delete_deleteAnimalFromDatabase_0&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -352,12 +385,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AnimalTest.getHealth_animalInstantiatewithName_String" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AnimalTest.getAge_animalInstantiatewithAge_String" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;models.AnimalTest.getHealth_animalInstantiatewithName_String&quot;" />
+        <option name="scriptParameters" value="--tests &quot;models.AnimalTest.getAge_animalInstantiatewithAge_String&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -392,12 +425,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AnimalTest.getName_animalInstantiatewithName_String" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AnimalTest.getall_returnsAllInstancesOfAnimal_false" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;models.AnimalTest.getName_animalInstantiatewithName_String&quot;" />
+        <option name="scriptParameters" value="--tests &quot;models.AnimalTest.getall_returnsAllInstancesOfAnimal_false&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -412,12 +445,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AnimalTest.person_instantiatesCorrectly_true" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AnimalTest.save_insertObjectIntoDatabase_Animal" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;models.AnimalTest.person_instantiatesCorrectly_true&quot;" />
+        <option name="scriptParameters" value="--tests &quot;models.AnimalTest.save_insertObjectIntoDatabase_Animal&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -434,11 +467,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AnimalTest.delete_deleteAnimalFromDatabase_0" />
+        <item itemvalue="Gradle.AnimalTest.getall_returnsAllInstancesOfAnimal_false" />
+        <item itemvalue="Gradle.AnimalTest.save_insertObjectIntoDatabase_Animal" />
         <item itemvalue="Gradle.AnimalTest.getId_animalInstantiatewithId_int" />
         <item itemvalue="Gradle.AnimalTest.getAge_animalInstantiatewithAge_String" />
-        <item itemvalue="Gradle.AnimalTest.getHealth_animalInstantiatewithName_String" />
-        <item itemvalue="Gradle.AnimalTest.getName_animalInstantiatewithName_String" />
-        <item itemvalue="Gradle.AnimalTest.person_instantiatesCorrectly_true" />
       </list>
     </recent_temporary>
   </component>
@@ -456,20 +489,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AnimalTest_person_instantiatesCorrectly_true - 2020.02.12 at 09h 29m 29s.xml">
-      <configuration name="AnimalTest.person_instantiatesCorrectly_true" configurationId="GradleRunConfiguration" />
+    <history-entry file="AnimalTest_save_insertObjectIntoDatabase_Animal - 2020.02.12 at 10h 23m 57s.xml">
+      <configuration name="AnimalTest.save_insertObjectIntoDatabase_Animal" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="AnimalTest_getName_animalInstantiatewithName_String - 2020.02.12 at 09h 33m 24s.xml">
-      <configuration name="AnimalTest.getName_animalInstantiatewithName_String" configurationId="GradleRunConfiguration" />
+    <history-entry file="AnimalTest_save_insertObjectIntoDatabase_Animal - 2020.02.12 at 10h 29m 41s.xml">
+      <configuration name="AnimalTest.save_insertObjectIntoDatabase_Animal" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="AnimalTest_getHealth_animalInstantiatewithName_String - 2020.02.12 at 09h 35m 28s.xml">
-      <configuration name="AnimalTest.getHealth_animalInstantiatewithName_String" configurationId="GradleRunConfiguration" />
+    <history-entry file="AnimalTest_save_insertObjectIntoDatabase_Animal - 2020.02.12 at 10h 33m 51s.xml">
+      <configuration name="AnimalTest.save_insertObjectIntoDatabase_Animal" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="AnimalTest_getAge_animalInstantiatewithAge_String - 2020.02.12 at 09h 36m 45s.xml">
-      <configuration name="AnimalTest.getAge_animalInstantiatewithAge_String" configurationId="GradleRunConfiguration" />
+    <history-entry file="AnimalTest_save_insertObjectIntoDatabase_Animal - 2020.02.12 at 10h 46m 14s.xml">
+      <configuration name="AnimalTest.save_insertObjectIntoDatabase_Animal" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="AnimalTest_getId_animalInstantiatewithId_int - 2020.02.12 at 09h 37m 54s.xml">
-      <configuration name="AnimalTest.getId_animalInstantiatewithId_int" configurationId="GradleRunConfiguration" />
+    <history-entry file="AnimalTest_save_insertObjectIntoDatabase_Animal - 2020.02.12 at 11h 02m 40s.xml">
+      <configuration name="AnimalTest.save_insertObjectIntoDatabase_Animal" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="AnimalTest_save_insertObjectIntoDatabase_Animal - 2020.02.12 at 11h 03m 16s.xml">
+      <configuration name="AnimalTest.save_insertObjectIntoDatabase_Animal" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="AnimalTest_save_insertObjectIntoDatabase_Animal - 2020.02.12 at 12h 00m 48s.xml">
+      <configuration name="AnimalTest.save_insertObjectIntoDatabase_Animal" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="AnimalTest_save_insertObjectIntoDatabase_Animal - 2020.02.12 at 12h 02m 50s.xml">
+      <configuration name="AnimalTest.save_insertObjectIntoDatabase_Animal" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="AnimalTest_getall_returnsAllInstancesOfAnimal_false - 2020.02.12 at 12h 10m 09s.xml">
+      <configuration name="AnimalTest.getall_returnsAllInstancesOfAnimal_false" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="AnimalTest_delete_deleteAnimalFromDatabase_0 - 2020.02.12 at 12h 16m 06s.xml">
+      <configuration name="AnimalTest.delete_deleteAnimalFromDatabase_0" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -484,10 +532,10 @@
       <window_info id="Job Explorer" order="5" />
       <window_info id="Image Layers" order="6" />
       <window_info id="Designer" order="7" />
-      <window_info content_ui="combo" id="Project" order="8" sideWeight="0.49887133" visible="true" weight="0.1561086" />
+      <window_info active="true" content_ui="combo" id="Project" order="8" sideWeight="0.49887133" visible="true" weight="0.1561086" />
       <window_info id="Structure" order="9" sideWeight="0.5011287" side_tool="true" weight="0.28630707" />
       <window_info anchor="bottom" id="Console" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.20446736" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.2766323" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Anonymous Apex" order="3" />
       <window_info anchor="bottom" id="Log Analyzer" order="4" />
@@ -497,7 +545,7 @@
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
       <window_info anchor="bottom" id="Find" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="11" visible="true" weight="0.3298969" />
+      <window_info anchor="bottom" id="Run" order="11" visible="true" weight="0.31786942" />
       <window_info anchor="bottom" id="Debug" order="12" weight="0.39862543" />
       <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
@@ -510,7 +558,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Maven" order="6" weight="0.32872927" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.173454" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.17289074" />
     </layout>
     <layout-to-restore>
       <window_info id="DB Browser" order="0" />
@@ -521,10 +569,10 @@
       <window_info id="Job Explorer" order="5" />
       <window_info id="Image Layers" order="6" />
       <window_info id="Designer" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="8" sideWeight="0.49887133" visible="true" weight="0.1561086" />
+      <window_info content_ui="combo" id="Project" order="8" sideWeight="0.49887133" visible="true" weight="0.1561086" />
       <window_info id="Structure" order="9" sideWeight="0.5011287" side_tool="true" weight="0.28630707" />
       <window_info anchor="bottom" id="Console" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.20446736" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.2766323" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Anonymous Apex" order="3" />
       <window_info anchor="bottom" id="Log Analyzer" order="4" />
@@ -534,8 +582,8 @@
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
       <window_info anchor="bottom" id="Find" order="10" />
-      <window_info anchor="bottom" id="Run" order="11" />
-      <window_info anchor="bottom" id="Debug" order="12" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="11" visible="true" weight="0.31786942" />
+      <window_info anchor="bottom" id="Debug" order="12" weight="0.39862543" />
       <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="15" />
@@ -638,23 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Animal.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layouts.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
@@ -672,9 +703,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/EndangeredAnimal.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Animal.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="105">
+          <caret line="7" column="89" selection-start-line="7" selection-start-column="89" selection-end-line="7" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registry.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/databases/wildlife.sql">
+      <provider editor-type-id="OdpsQlGraph" />
+      <provider selected="true" editor-type-id="OdpsQlEditor">
+        <state relative-caret-position="240">
+          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/models/DatabaseRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -688,20 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registry.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Endangered.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -709,25 +756,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/databases/wildlife.sql">
-      <provider editor-type-id="OdpsQlGraph" />
-      <provider selected="true" editor-type-id="OdpsQlEditor">
-        <state relative-caret-position="240">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/Database.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/models/AnimalTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+        <state relative-caret-position="184">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -736,11 +768,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/Animal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        <state relative-caret-position="193">
+          <caret line="73" column="49" lean-forward="true" selection-start-line="73" selection-start-column="49" selection-end-line="73" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/models/AnimalTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Endangered.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/EndangeredAnimal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/models/EndangeredAnimalTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
         </state>
       </provider>
     </entry>

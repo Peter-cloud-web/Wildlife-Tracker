@@ -48,7 +48,7 @@ public class App {
             int animal_id = Integer.parseInt(req.queryParams("animal_id"));
             String health = req.queryParams("health");
             int age = Integer.parseInt(req.queryParams("age"));
-            Animal newAnimal = new Animal(name,health,age,animal_id);
+            Animal newAnimal = new Animal(name);
             newAnimal.saveAnimal();
             return new ModelAndView(model,"success.hbs");
         },new HandlebarsTemplateEngine());

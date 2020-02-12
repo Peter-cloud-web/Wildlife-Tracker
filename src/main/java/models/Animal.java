@@ -8,24 +8,16 @@ import java.util.Objects;
 public class Animal {
 
     private String animalName;
-    private String animalHealth;
-    private int animalAge;
-    private int animal_id;
     private int id;
 
 
-    public Animal(String animalName, String animalHealth, int animalAge, int id) {
+    public Animal(String animalName) {
         this.animalName = animalName;
-        this.animalHealth = animalHealth;
-        this.animalAge = animalAge;
-        this.animal_id = animal_id;
         this.id = id;
     }
 
 
-    public int getAnimal_id() {
-        return animal_id;
-    }
+
 
     public String getAnimalName() {
         return animalName;
@@ -33,22 +25,6 @@ public class Animal {
 
     public void setAnimalName(String animalName) {
         this.animalName = animalName;
-    }
-
-    public String getAnimalHealth() {
-        return animalHealth;
-    }
-
-    public void setAnimalHealth(String animalHealth) {
-        this.animalHealth = animalHealth;
-    }
-
-    public int getAnimalAge() {
-        return animalAge;
-    }
-
-    public void setAnimalAge(int animalAge) {
-        this.animalAge = animalAge;
     }
 
     public int getId() {
@@ -64,33 +40,29 @@ public class Animal {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Animal animal = (Animal) o;
-        return animalAge == animal.animalAge &&
-                animal_id == animal.animal_id &&
-                id == animal.id &&
-                Objects.equals(animalName, animal.animalName) &&
-                Objects.equals(animalHealth, animal.animalHealth);
+        return id == animal.id &&
+                animalName.equals(animal.animalName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(animalName, animalHealth, animalAge, animal_id, id);
+        return Objects.hash(animalName, id);
     }
-
 
     public void saveAnimal() {
         try (Connection con = Database.sql2o.open()) {
-            String sql = "INSERT INTO animals (animalName, animal_id) VALUES (:animalName,:animal_id);";
+            String sql = "INSERT INTO animals (animalName) VALUES (:animalName);";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("animalName", this.animalName)
-                    .addParameter("animal_id", this.animal_id)
                     .executeUpdate()
                     .getKey();
         }
     }
 
     public static List<Animal> getAll() {
+
         try (Connection con = Database.sql2o.open()) {
-            String sql = "SELECT * FROM anmals";
+            String sql = "SELECT * FROM animals";
             return con.createQuery(sql)
                     .executeAndFetch(Animal.class);
 
@@ -106,6 +78,14 @@ public class Animal {
         }catch (IndexOutOfBoundsException ex){
             System.out.println(ex);
             return null;
+        }
+    }
+    public void delete() {
+        try(Connection con = Database.sql2o.open()) {
+            String sql = "DELETE FROM animals WHERE id=:id;";
+            con.createQuery(sql)
+                    .addParameter("id", id)
+                    .executeUpdate();
         }
     }
 }
