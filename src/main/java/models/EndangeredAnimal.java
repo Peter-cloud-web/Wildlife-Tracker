@@ -5,16 +5,15 @@ import org.sql2o.Connection;
 import java.util.List;
 import java.util.Objects;
 
-import static org.h2.expression.Function.VALUES;
+
 
 public class EndangeredAnimal {
     private String animal_name;
     private String animal_health;
     private String animal_age;
-    private int animal_id;
     private int id;
 
-    public EndangeredAnimal(String animal_name, String animal_health, String animal_age, int id) {
+    public EndangeredAnimal(String animal_name, String animal_health, String animal_age) {
         this.animal_name = animal_name;
         this.animal_health = animal_health;
         this.animal_age = animal_age;
@@ -37,22 +36,12 @@ public class EndangeredAnimal {
         this.animal_health = animal_health;
     }
 
-
-
     public String getAnimal_age() {
         return animal_age;
     }
 
     public void setAnimal_age(String animal_age) {
         this.animal_age = animal_age;
-    }
-
-    public int getAnimal_id() {
-        return animal_id;
-    }
-
-    public void setAnimal_id(int animal_id) {
-        this.animal_id = animal_id;
     }
 
     public int getId() {
@@ -62,13 +51,13 @@ public class EndangeredAnimal {
     public void setId(int id) {
         this.id = id;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         EndangeredAnimal that = (EndangeredAnimal) o;
-        return animal_id == that.animal_id &&
-                id == that.id &&
+        return id == that.id &&
                 animal_name.equals(that.animal_name) &&
                 animal_health.equals(that.animal_health) &&
                 animal_age.equals(that.animal_age);
@@ -76,9 +65,10 @@ public class EndangeredAnimal {
 
     @Override
     public int hashCode() {
-        return Objects.hash(animal_name, animal_health, animal_age, animal_id, id);
+        return Objects.hash(animal_name, animal_health, animal_age, id);
     }
-    public void saveAnimal(EndangeredAnimal endangeredAnimal){
+
+    public void saveEndangered(){
         try(Connection conn = Database.sql2o.open()){
             String sql = "INSERT INTO  endangered_animals(animal_name, animal_age, animal_health ) VALUES (:animal_name, :animal_age,:animal_health);";
             this.id = (int) conn.createQuery(sql, true)
@@ -89,7 +79,6 @@ public class EndangeredAnimal {
                     .getKey();
         }
     }
-
     public static List<EndangeredAnimal> getAllAnimals() {
         try (Connection conn = Database.sql2o.open()) {
             String sql = "SELECT * FROM endangered_animals ORDER BY id DESC;";
@@ -108,6 +97,14 @@ public class EndangeredAnimal {
         }catch (IndexOutOfBoundsException ex){
             System.out.println(ex);
             return null;
+        }
+    }
+    public void delete() {
+        try(Connection con = Database.sql2o.open()) {
+            String sql = "DELETE FROM endangered_animals; WHERE id=:id;";
+            con.createQuery(sql)
+                    .addParameter("id", id)
+                    .executeUpdate();
         }
     }
 

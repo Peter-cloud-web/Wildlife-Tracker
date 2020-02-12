@@ -59,7 +59,7 @@ public class App {
             String animalLocation = req.queryParams("animalLocation");
             int id = Integer.parseInt(req.queryParams("id"));
             int animal_id = Integer.parseInt(req.queryParams("animal_id"));
-            Sighting sighting = new Sighting(rangerName,animalLocation,id,animal_id);
+            Sighting sighting = new Sighting(rangerName,animalLocation);
             sighting.save();
             return new ModelAndView(model,"success.hbs");
         },new HandlebarsTemplateEngine());
@@ -70,8 +70,8 @@ public class App {
             String health = req.queryParams("health");
             String age = req.queryParams("age");
             int id = Integer.parseInt(req.queryParams("id"));
-            EndangeredAnimal endangered = new EndangeredAnimal(name,health,age,id);
-            endangered.saveAnimal(endangered);
+            EndangeredAnimal endangered = new EndangeredAnimal(name,health,age);
+            endangered.saveEndangered();
             model.put("endangered",endangered);
             return new ModelAndView(model,"success.hbs");
         },new HandlebarsTemplateEngine());
