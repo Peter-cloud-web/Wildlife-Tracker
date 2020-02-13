@@ -1,82 +1,75 @@
 {{#partial "content"}}
     <section class="registry">
-        <h1>
-            <a href="/"><-</a> </h1>
         <section class="stats">
-
-            <div class="left-sec">
-                <h3>Tracked Animals</h3>
-                {{#each  getallSightings}}
-                    <div>
-                        <p>Animal{{animal_name}} Sighted</p>
-                        <p>Location: {{animal_location}}</p>
-                        <p>By: Ranger {{ranger_name}}</p>
+            <div class="card">
+                <h5><b><u>All Endangered Animals</u></b></h5>
+                {{#each   allEndangered}}
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <p>Name: {{animal_name}}</p>
+                                    <p>Health: {{animal_health}}</p>
+                                    <p>Age: {{animal_age}}</p>
+                                    <p>Id: 0{{id}}</p>
+                                </div>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">update</a>
+                                <a href="#" class="btn btn-danger">delete</a>
+                            </div>
+                        </div>
                     </div>
                 {{/each}}
-                <div>
-                    <p>Rhino Sighted</p>
-                    <p>Zone A</p>
-                    <p>By: Ranger Sam</p>
-                </div>
             </div>
-
-            <div class="right-sec">
-                <div>
-                    <p> <span class="track" data-value="123">123</span>K <br> Number of tracked animals </p>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
+            <h5><u>All sighted Animals</u></h5>
+                {{#each  allSightings}}
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                <p>Animal{{animal_name}} Sighted</p>
+                                <p>Location: {{animallocation}}</p>
+                                <p>By: Ranger {{rangername}}</p>
+                            </div>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Update</a>
+                            <a href="#" class="btn btn-danger">delete</a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <p> <span class="sick">59</span>K <br> Number of sick animals rescued </p>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-                <div>
-                    <p> <span class="money">100</span>K <br> Total amount saved by tracking </p>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-                <div class="graph">
-                    <div class="graph1">TRACKED</div>
-                    <div class="graph2">RESCUED</div>
-                    <div class="graph3">SAVED</div>
-                </div>
-            </div>
+                {{/each}}
 
         </section>
         <section class="recorded">
-            <h1 class="text-center"><span class="text-center">Recorded Animals</span></h1>
-
             <div>
-                <h1><span>Normal</span></h1>
+                <h5><u>All registered Animals</u></h5>
                 {{#each   allAnimals}}
-                    <div>
-                        <p>Name: {{animal_name}}</p>
-                        <p>Id: 0{{id}}</p>
+                    <div class="text-white bg-dark col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <p>Name: {{animalname}}</p>
+                                    <p>Id: {{id}}</p>>
+                                </div>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">Update</a>
+                                <a href="#" class="btn btn-danger">delete</a>
+                            </div>
+                        </div>
                     </div>
                 {{/each}}
-            </div>
-            <div>
-                <h1><span>Endangered</span></h1>
-                {{#each   allEndangered}}
-                    <div>
-                        <p>Name: {{animal_name}}</p>
-                        <p>Health: {{animal_health}}</p>
-                        <p>Age: {{animal_age}}</p>
-                        <p>Id: 0{{id}}</p>
-                    </div>
-                {{/each}}
+            </div><br><br>
             </div>
         </section>
+    </section>
+    <style>
+h5{ font-size:30px;text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Modak', cursive;
+    font-family: 'Abril Fatface', cursive;
+ font-weight:bolder;color:black;}
+</style>
 
 {{/partial}}
 

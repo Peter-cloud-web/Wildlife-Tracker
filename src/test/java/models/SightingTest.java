@@ -28,7 +28,7 @@ public class SightingTest {
     public void save_insertObjectIntoDatabase_Animal(){
         Sighting sighting = new Sighting("Peter","zoneA");
         sighting.save();
-        assertTrue(Sighting.getAll().get(0).equals(sighting));
+        assertTrue(Sighting.getAllSightings().get(0).equals(sighting));
     }
 
 
