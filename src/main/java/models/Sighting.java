@@ -39,6 +39,13 @@ public class Sighting {
     public void setAnimal_sighted(String animal_sighted) {
         this.animal_sighted = animal_sighted;
     }
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
 
     @Override
@@ -47,9 +54,9 @@ public class Sighting {
         if (o == null || getClass() != o.getClass()) return false;
         Sighting sighting = (Sighting) o;
         return id == sighting.id &&
-                ranger_name.equals(sighting.ranger_name) &&
-                animal_location.equals(sighting.animal_location) &&
-                animal_sighted.equals(sighting.animal_sighted);
+                this.ranger_name.equals(sighting.ranger_name) &&
+                this.animal_location.equals(sighting.animal_location) &&
+                this.animal_sighted.equals(sighting.animal_sighted);
     }
 
     @Override
@@ -77,7 +84,7 @@ public class Sighting {
                     .executeAndFetch(Sighting.class);
         }
     }
-    public static Sighting find(int id) {
+    public static Sighting findById(int id) {
         try(Connection con = Database.sql2o.open()) {
             String sql = "SELECT * FROM sightings WHERE id=:id;";
             Sighting sighting = con.createQuery(sql)
@@ -86,6 +93,14 @@ public class Sighting {
             return sighting;
         } catch (IndexOutOfBoundsException exception) {
             return null;
+        }
+    }
+    public void delete() {
+        try(Connection con = Database.sql2o.open()) {
+            String sql = "DELETE FROM sightings WHERE id=:id;";
+            con.createQuery(sql)
+                    .addParameter("id", id)
+                    .executeUpdate();
         }
     }
 

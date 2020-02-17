@@ -25,23 +25,13 @@ public class AnimalTest {
     @Test
     public void getId_animalInstantiatewithId_int(){
         Animal testAnimal= new Animal("Rhino");
-        assertEquals(4,testAnimal.getId());
+        assertEquals(0,testAnimal.getId());
     }
     @Test
     public void save_insertObjectIntoDatabase_Animal(){
         Animal testAnimal= new Animal("Rhino");
         testAnimal.saveAnimal();
         assertTrue(Animal.getAll().get(0).equals(testAnimal));
-    }
-    @Test
-    public void getall_returnsAllInstancesOfAnimal_false() {
-        Animal animal1 = new Animal("Rhino");
-        animal1.saveAnimal();
-        Animal animal2 = new Animal("Rabbit");
-        animal2.saveAnimal();
-        assertEquals(true, Animal.getAll().get(0).equals(animal1));
-        assertEquals(true,Animal.getAll().get(1).equals(animal2));
-
     }
     @Test
     public void find_returns_animal()
