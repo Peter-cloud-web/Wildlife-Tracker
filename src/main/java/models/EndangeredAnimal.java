@@ -87,7 +87,7 @@ public class EndangeredAnimal {
                     .executeAndFetch(EndangeredAnimal.class);
         }
     }
-    public EndangeredAnimal findById(int id) {
+    public static EndangeredAnimal findById(int id) {
         String sql = "SELECT * FROM endangered_animals WHERE id=:id";
         try (Connection conn = Database.sql2o.open()){
             EndangeredAnimal animal = conn.createQuery(sql)

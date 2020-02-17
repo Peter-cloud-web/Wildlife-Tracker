@@ -62,13 +62,13 @@ public class Animal {
     public static List<Animal> getAll() {
 
         try (Connection con = Database.sql2o.open()) {
-            String sql = "SELECT * FROM animals";
+            String sql = "SELECT * FROM animals ORDER BY id DESC;";
             return con.createQuery(sql)
                     .executeAndFetch(Animal.class);
 
         }
     }
-    public Animal findById(int id) {
+    public static Animal findById(int id) {
         String sql = "SELECT * FROM animals WHERE id=:id;";
         try (Connection conn = Database.sql2o.open()){
             Animal animal = conn.createQuery(sql)
@@ -85,6 +85,15 @@ public class Animal {
             String sql = "DELETE FROM animals WHERE id=:id;";
             con.createQuery(sql)
                     .addParameter("id", id)
+                    .executeUpdate();
+        }
+    }
+    public void updateName(String animalName) {
+        try(Connection con = Database.sql2o.open()) {
+            String sql = "UPDATE animals SET animalName=:animalName WHERE id=:id;";
+            con.createQuery(sql)
+                    .addParameter("id", id)
+                    .addParameter("animalName", this.animalName)
                     .executeUpdate();
         }
     }

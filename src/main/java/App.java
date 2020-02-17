@@ -21,6 +21,8 @@ public class App {
             return new ModelAndView(model,"registry.hbs");
         },new HandlebarsTemplateEngine());
 
+
+
         get("/registry", (req,res)->{
                     Map<String, Object> model = new HashMap<>();
                     model.put("allAnimals", Animal.getAll());
@@ -41,6 +43,8 @@ public class App {
 
         get("/sighting", (req,res)-> {
             Map<String, Object> model = new HashMap<>();
+            model.put("allAnimals", Animal.getAll());
+            model.put("allEndangered", EndangeredAnimal.getAllAnimals());
             return new ModelAndView(model,"sighting.hbs");
         }, new HandlebarsTemplateEngine());
 
@@ -58,16 +62,20 @@ public class App {
 
         post("/new/sighting",(req,res)->{
             Map<String,Object>model = new HashMap<>();
-            String rangerName = req.queryParams("rangerName");
-            String animalLocation = req.queryParams("animalLocation");
-            Sighting sighting = new Sighting(rangerName,animalLocation);
-            sighting.save();
+            String ranger_name = req.queryParams("ranger_name");
+            String animal_location = req.queryParams("animal_location");
+            String animal_sighting = req.queryParams("animal_sighting");
+            Sighting sighting = new Sighting(ranger_name,animal_location,animal_sighting);
+            sighting.saveSighting();
+            model.put("sighting",sighting);
+            model.put("template", "success.hbs");
             return new ModelAndView(model,"success.hbs");
         },new HandlebarsTemplateEngine());
 
         post("new/endangered" ,(req,res)->{
             Map<String,Object> model = new HashMap<>();
             String name = req.queryParams("name");
+
             String health = req.queryParams("health");
             String age = req.queryParams("age");
             EndangeredAnimal endangered = new EndangeredAnimal(name,health,age);

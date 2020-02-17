@@ -5,31 +5,41 @@ import java.util.Objects;
 
 
 public class Sighting {
-    private String rangerName;
-    private String animalLocation;;
+    private String ranger_name;
+    private String animal_location;
+    private String animal_sighted;
     private int id;
 
-    public Sighting(String rangerName, String animalLocation) {
-        this.rangerName = rangerName;
-        this.animalLocation = animalLocation;
+    public Sighting(String ranger_name, String animal_location, String animal_sighted) {
+        this.ranger_name = ranger_name;
+        this.animal_location = animal_location;
         this.id = id;
     }
 
-    public String getRangerName() {
-        return rangerName;
+    public String getRanger_name() {
+        return ranger_name;
     }
 
-    public void setRangerName(String rangerName) {
-        this.rangerName = rangerName;
+    public void setRanger_name(String ranger_name) {
+        this.ranger_name = ranger_name;
     }
 
-    public String getAnimalLocation() {
-        return animalLocation;
+    public String getAnimal_location() {
+        return animal_location;
     }
 
-    public void setAnimalLocation(String animalLocation) {
-        this.animalLocation = animalLocation;
+    public void setAnimal_location(String animal_location) {
+        this.animal_location = animal_location;
     }
+
+    public String getAnimal_sighted() {
+        return animal_sighted;
+    }
+
+    public void setAnimal_sighted(String animal_sighted) {
+        this.animal_sighted = animal_sighted;
+    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -37,21 +47,23 @@ public class Sighting {
         if (o == null || getClass() != o.getClass()) return false;
         Sighting sighting = (Sighting) o;
         return id == sighting.id &&
-                rangerName.equals(sighting.rangerName) &&
-                animalLocation.equals(sighting.animalLocation);
+                ranger_name.equals(sighting.ranger_name) &&
+                animal_location.equals(sighting.animal_location) &&
+                animal_sighted.equals(sighting.animal_sighted);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(rangerName, animalLocation,id);
+        return Objects.hash(ranger_name, animal_location, animal_sighted);
     }
 
-    public void save() {
+    public void saveSighting() {
         try(Connection con = Database.sql2o.open()) {
-            String sql = "INSERT INTO sightings ( animalLocation, rangerName) VALUES ( :animalLocation, :rangerName);";
+            String sql = "INSERT INTO sightings( animal_location, ranger_name,animal_sighted) VALUES ( :animal_location, :ranger_name,:animal_sighted);";
             this.id = (int) con.createQuery(sql, true)
-                    .addParameter("animalLocation", this.animalLocation)
-                    .addParameter("rangerName", this.rangerName)
+                    .addParameter("animal_sighted", this.animal_sighted)
+                    .addParameter("animal_location", this.animal_location)
+                    .addParameter("ranger_name", this.ranger_name)
                     .throwOnMappingFailure(false)
                     .executeUpdate()
                     .getKey();

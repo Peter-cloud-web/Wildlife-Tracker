@@ -36,12 +36,19 @@ public class AnimalTest {
     @Test
     public void getall_returnsAllInstancesOfAnimal_false() {
         Animal animal1 = new Animal("Rhino");
-        Animal animal2 = new Animal("Rabbit");
         animal1.saveAnimal();
+        Animal animal2 = new Animal("Rabbit");
         animal2.saveAnimal();
         assertEquals(true, Animal.getAll().get(0).equals(animal1));
         assertEquals(true,Animal.getAll().get(1).equals(animal2));
 
+    }
+    @Test
+    public void find_returns_animal()
+    {
+        Animal animal1 = new Animal("Rhino");
+        animal1.saveAnimal();
+        assertEquals(animal1 ,Animal.findById(animal1.getId()));
     }
     @Test
     public void delete_deleteAnimalFromDatabase_0(){
@@ -50,7 +57,6 @@ public class AnimalTest {
         testAnimal.delete();
         assertEquals(0,Animal.getAll().size());
     }
-
 
 
 }

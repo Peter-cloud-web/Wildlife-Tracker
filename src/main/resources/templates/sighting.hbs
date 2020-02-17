@@ -3,10 +3,12 @@
     <select name="selectedAnimal" required>
         <option value="">Choose Animal</option><br><br>
         <option value="1">Rhino</option><br><br>
-        {{#each allAnimals}}
-            <option value="{{id}}">{{animal_name}}</option><br><br>
+        {{#each   allAnimals}}
+            <option value="{{id}}">{{animalName}}</option><br><br>
         {{/each}}
+        Endangered Animals
         {{#each allEndangered}}
+            Endangered Animals
             <option value="{{id}}">{{animal_name}}</option><br><br>
         {{/each}}
 
@@ -15,5 +17,6 @@
     <input type="text" name="ranger" id="" placeholder="Ranger Name" required><br><br>
     <input type="submit" class="btn light">
 </form>
+</div>
 {{/partial}}
 {{> layouts.hbs}}

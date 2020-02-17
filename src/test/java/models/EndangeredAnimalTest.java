@@ -43,5 +43,12 @@ public class EndangeredAnimalTest {
         endangeredAnimal.delete();
         assertEquals(0,EndangeredAnimal.getAllAnimals().size());
     }
+    @Test
+    public void find_returns_animal()
+    {
+        EndangeredAnimal endangeredAnimal = new EndangeredAnimal("Rhino","ill","young");
+        endangeredAnimal.saveEndangered();
+        assertEquals(endangeredAnimal , EndangeredAnimal.findById(endangeredAnimal.getId()));
+    }
 
 }
