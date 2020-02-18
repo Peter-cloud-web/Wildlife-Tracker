@@ -6,15 +6,13 @@
         {{#each   allAnimals}}
             <option value="{{id}}">{{animalName}}</option><br><br>
         {{/each}}
-        Endangered Animals
         {{#each allEndangered}}
-            Endangered Animals
-            <option value="{{id}}">{{animal_name}}</option><br><br>
+            <option value="{{id}}">{{animal_sighted}}</option><br><br>
         {{/each}}
 
     </select>
-    <input type="text" name="location" id="" placeholder="Location" required><br><br>
-    <input type="text" name="ranger" id="" placeholder="Ranger Name" required><br><br>
+    <input type="text" name="animal_location" id="" placeholder="Location" required><br><br>
+    <input type="text" name="ranger_name" id="" placeholder="Ranger Name" required><br><br>
     <input type="submit" class="btn light">
 </form>
 </div>

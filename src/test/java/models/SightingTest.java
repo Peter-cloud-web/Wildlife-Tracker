@@ -25,19 +25,19 @@ public class SightingTest {
         assertEquals("zoneA",sighting.getAnimal_location());
     }
 
-//    @Test
-//    public void save_insertObjectIntoDatabase_Animal(){
-//        Sighting sighting = new Sighting("Peter","zoneA","lion");
-//        sighting.saveSighting();
-//        assertTrue(Sighting.getAllSightings().get(0).equals(sighting));
-//    }
-//    @Test
-//    public void find_returns_animal()
-//    {
-//        Sighting sighting = new Sighting("Peter","zone A","lion");
-//        sighting.saveSighting();
-//        assertEquals(sighting ,Sighting.findById(sighting.getId()));
-//    }
+    @Test
+    public void save_insertObjectIntoDatabase_Animal(){
+        Sighting sighting = new Sighting("Peter","zoneA","lion");
+        sighting.saveSighting();
+        assertTrue(Sighting.getAllSightings().get(0).equals(sighting));
+    }
+    @Test
+    public void find_returns_animal()
+    {
+        Sighting sighting = new Sighting("Peter","zone A","lion");
+        sighting.saveSighting();
+        assertEquals(sighting ,Sighting.findById(sighting.getId()));
+    }
     @Test
     public void delete_deleteAnimalFromDatabase_0(){
         Sighting sighting = new Sighting("Peter","zoneA","lion");

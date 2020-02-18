@@ -13,6 +13,7 @@ public class Sighting {
     public Sighting(String ranger_name, String animal_location, String animal_sighted) {
         this.ranger_name = ranger_name;
         this.animal_location = animal_location;
+        this.animal_sighted = animal_sighted;
         this.id = id;
     }
 
@@ -54,9 +55,9 @@ public class Sighting {
         if (o == null || getClass() != o.getClass()) return false;
         Sighting sighting = (Sighting) o;
         return id == sighting.id &&
-                this.ranger_name.equals(sighting.ranger_name) &&
-                this.animal_location.equals(sighting.animal_location) &&
-                this.animal_sighted.equals(sighting.animal_sighted);
+                ranger_name.equals(sighting.ranger_name) &&
+                animal_location.equals(sighting.animal_location) &&
+                animal_sighted.equals(sighting.animal_sighted);
     }
 
     @Override

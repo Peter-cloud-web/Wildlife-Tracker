@@ -78,8 +78,8 @@ public class App {
             Map<String,Object>model = new HashMap<>();
             String ranger_name = req.queryParams("ranger_name");
             String animal_location = req.queryParams("animal_location");
-            String animal_sighting = req.queryParams("animal_sighting");
-            Sighting sighting = new Sighting(ranger_name,animal_location,animal_sighting);
+            String animal_sighted = req.queryParams("animal_sighted");
+            Sighting sighting = new Sighting(ranger_name,animal_location,animal_sighted);
             sighting.saveSighting();
             model.put("sighting",sighting);
             model.put("template", "success.hbs");
